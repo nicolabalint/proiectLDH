@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb is end;
+
+architecture Neneci of tb is
+  component CNTREG
+    port(RST,CLK:in std_logic;
+      D:in std_logic_vector(15 downto 0);
+      M1,ME:out std_logic;
+      Q1:out std_logic_vector(4 downto 0)
+    );
+  end component;
+  signal RST,CLK,M1,ME:std_logic;
+  signal D:std_logic_vector(15 downto 0);
+  signal Q1: std_logic_vector(4 downto 0);
+begin
+  RST<='1','0' after 40 ns;
+  
+  process
+    begin
+      CLK<='0';
+      wait for 20 ns;
+      CLK<='1';
+      wait for 20 ns;
+    end process;
+    
+    process
+      variable temp:unsigned(15 downto 0);
+      begin
+        D<=std_logic_vector(temp);
+        wait for 40 ns;
+        temp:=temp+1;
+      end process;
+    end;

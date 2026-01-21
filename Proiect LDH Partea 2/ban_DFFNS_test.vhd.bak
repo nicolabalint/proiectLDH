@@ -1,0 +1,23 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity ban_DFFNS_test is end;
+
+architecture ban_test of ban_DFFNS_test is
+  component ban_DFFNS
+    port(
+      SN, D, CKN: in std_logic; 
+      Q, QN: out std_logic
+    );
+  end component;
+  signal SN: std_logic := '1';
+  signal CKN: std_logic := '0';
+  signal D: std_logic := '1';
+  signal Q: std_logic := '1';
+  signal QN: std_logic := '1';
+  begin
+    UUT:ban_DFFNS port map(SN,D,CKN,Q,QN);
+    D<= not D after 10 ns;
+    SN<= '0','1' after 20 ns;
+    CKN<= not CKN after 5 ns;
+end;

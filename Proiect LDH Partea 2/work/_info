@@ -1,0 +1,249 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dC:/Users/Nico/Desktop/Proiect LDH Partea 2
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vban_DFFNS
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+31
+I8n_4J1_[ZT2C1Z9f`EnNU1
+Z2 dC:/Users/Nico/Desktop/Proiect LDH Partea 2
+Z3 w1736892581
+Z4 8C:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS_verilog.v
+Z5 FC:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS_verilog.v
+L0 3
+Z6 OE;L;10.2c;57
+Z7 !s108 1736892601.996000
+Z8 !s107 C:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS_verilog.v|
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS_verilog.v|
+Z10 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+nban_@d@f@f@n@s
+!s100 U1]e?hHn_iGHjA`ABDSD=3
+!s85 0
+!i10b 1
+!i111 0
+Eban_dffns
+Z11 w1736893492
+Z12 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z13 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+R2
+Z14 8C:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS.vhd
+Z15 FC:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS.vhd
+l0
+L5
+VkUNTSdf_g_hiR2]F_cJL;1
+Z16 OE;C;10.2c;57
+32
+Z17 !s110 1736893517
+Z18 !s108 1736893517.686000
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS.vhd|
+Z20 !s107 C:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS.vhd|
+Z21 o-work work
+Z22 tExplicit 1
+!s100 GC8Fa1k@3VNRAj2aClSYL1
+!i10b 1
+!i111 0
+Aban_dffns_comp
+R12
+R13
+DEx4 work 9 ban_dffns 0 22 kUNTSdf_g_hiR2]F_cJL;1
+32
+R17
+l19
+L18
+Vb`]n[4BjbEHISUf=PE7k^2
+R16
+R18
+R19
+R20
+R21
+R22
+!s100 ZnU_5J`4;dz5mlfgGheWe0
+!i10b 1
+!i111 0
+vban_DFFNS_test
+R1
+r1
+31
+Ih?B62Nm2JDf=EIJK=2YdK1
+R2
+R3
+R4
+R5
+L0 34
+R6
+R7
+R8
+R9
+R10
+nban_@d@f@f@n@s_test
+!s100 CXnh=j_oDBC6TY3Nc4>^?3
+!s85 0
+!i10b 1
+!i111 0
+Eban_dffns_test
+Z23 w1736893961
+R12
+R13
+R2
+Z24 8C:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS_test.vhd
+Z25 FC:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS_test.vhd
+l0
+L4
+V_W6G`AI2;AHnjf_ID:R4_3
+R16
+32
+Z26 !s110 1736893966
+Z27 !s108 1736893966.836000
+Z28 !s90 -reportprogress|300|-work|work|C:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS_test.vhd|
+Z29 !s107 C:/Users/Nico/Desktop/Proiect LDH Partea 2/ban_DFFNS_test.vhd|
+R21
+R22
+!s100 <Y7SfKn[bXVc8[N19EKI<2
+!i10b 1
+!i111 0
+Aban_test
+R12
+R13
+DEx4 work 14 ban_dffns_test 0 22 _W6G`AI2;AHnjf_ID:R4_3
+32
+R26
+l18
+L6
+VKkkl7Ge`Y]aGDbPmGV]7;3
+R16
+R27
+R28
+R29
+R21
+R22
+!s100 U^UF:WYdE2UOMF8P2S9WC3
+!i10b 1
+!i111 0
+Ecntreg
+Z30 w1738255724
+Z31 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+R12
+R13
+Z32 dC:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2
+Z33 8C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/vhdl1.vhd
+Z34 FC:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/vhdl1.vhd
+l0
+L5
+VOBZ3iI?I4DjiUVj96NJ2N2
+R16
+32
+Z35 !s110 1738255731
+Z36 !s108 1738255731.073000
+Z37 !s90 -reportprogress|300|-work|work|C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/vhdl1.vhd|
+Z38 !s107 C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/vhdl1.vhd|
+R21
+R22
+!s100 T>jS8GP2R<TdZjDVbC^BG0
+!i10b 1
+!i111 0
+Aneneci
+R31
+R12
+R13
+DEx4 work 6 cntreg 0 22 OBZ3iI?I4DjiUVj96NJ2N2
+l14
+L13
+V0zX3XTI_L0b2S8VLod3^^3
+R16
+32
+R35
+R36
+R37
+R38
+R21
+R22
+!s100 >l>:[Bf3olc2;@Mf^NiJZ0
+!i10b 1
+!i111 0
+vFSM
+R1
+r1
+!s85 0
+31
+IGVhSVk=?CNhJC>G8N_Q?01
+R32
+w1738261133
+8C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/verilog1.v
+FC:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/verilog1.v
+L0 1
+R6
+R10
+n@f@s@m
+!s100 :z1jjU1zbmFo=d66M0M3<1
+!s108 1738261137.177000
+!s107 C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/verilog1.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/verilog1.v|
+!i10b 1
+!i111 0
+Etb
+Z39 w1738259183
+R31
+R12
+R13
+R32
+Z40 8C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/vhdl1_tb.vhd
+Z41 FC:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/vhdl1_tb.vhd
+l0
+L5
+VX;:a`nzbKKZJ9?]cB4X0j3
+R16
+32
+Z42 !s110 1738261631
+Z43 !s108 1738261631.526000
+Z44 !s90 -reportprogress|300|-work|work|C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/vhdl1_tb.vhd|
+Z45 !s107 C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/vhdl1_tb.vhd|
+R21
+R22
+!s100 ;Y@PX:H@lkE_El:1U<28Q3
+!i10b 1
+!i111 0
+Aneneci
+R31
+R12
+R13
+DEx4 work 2 tb 0 22 X;:a`nzbKKZJ9?]cB4X0j3
+l18
+L7
+V5]GgWTHRCGPYHV9z16gVb3
+R16
+32
+R42
+R43
+R44
+R45
+R21
+R22
+!s100 GMiEzgJjcFh9k314nO9^C0
+!i10b 1
+!i111 0
+vtb1
+R1
+r1
+31
+Ic=?NnTVQMHZM^:C;z8[602
+R32
+w1738261889
+8C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/verilog1_tb.v
+FC:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/verilog1_tb.v
+L0 3
+R6
+R10
+!s85 0
+!i10b 1
+!s100 a67f@Rob^YC=W`D`AcV0Z2
+!s108 1738261900.813000
+!s107 C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/verilog1_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Nico/Desktop/an 3 mon/Proiect LDH Partea 2/verilog1_tb.v|
+!i111 0

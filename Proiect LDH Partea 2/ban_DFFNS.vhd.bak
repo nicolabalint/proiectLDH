@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity ban_DFFNS is
+  generic(
+    tp_LHQ: time := 0.71 ns;
+    tp_HLQ: time := 0.64 ns;
+    tp_LHQN: time := 0.54 ns;
+    tp_HLQN: time := 0.59 ns
+  );
+  port(
+    SN, D, CKN: in std_logic; 
+    Q, QN: out std_logic     
+  );
+end ban_DFFNS;
+
+architecture ban_DFFNS_COMP of ban_DFFNS is
+begin
+  process(SN, CKN)
+  begin
+    if (SN = '0') then
+      Q <= '1';
+      QN <= '0';
+    elsif (falling_edge(CKN)) then 
+      if (D = '0') then
+        Q <= '0' after tp_HLQ;
+        QN <= '1' after tp_LHQN;
+      elsif (D = '1') then
+        Q <= '1' after tp_LHQ;
+        QN <= '0' after tp_HLQN;
+      end if;
+    end if;
+  end process;
+end;

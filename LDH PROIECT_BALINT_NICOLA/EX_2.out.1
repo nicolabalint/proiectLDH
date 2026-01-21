@@ -1,0 +1,154 @@
+
+**** 11/30/24 12:47:59 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ CIRCUIT
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+VD 14 0 0 PULSE(0 5V 0 {TR} {TR} 10n 20n)
+VCLK 16 0 0 PULSE(0 5V 2n {TR} {TR} 5n 10n)
+VS 15 0 0 PULSE(0 5V 20N {TR} {TR} 100N 200N)
+VDD 10 0 5
+
+X1 14 220 19 10 21 INV3
+X2 16 10 19 INV
+X3 19 10 20 INV
+X4 21 15 10 22 NAND2
+X5 22 19 20  10 21 INV3
+X6 22  19 20 10 23 INV3
+X7 24 19 20 10 23 INV3
+X8 23 15 10 24 NAND2
+X9 24 10 25 INV
+X10 24 10 18 INV
+X11 25 10 17 INV
+
+CL1 17 0 {CL}
+CL2 18 0 {CL}
+
+.inc "SUBCIRCUITE.txt"
+
+**** INCLUDING SUBCIRCUITE.txt ****
+.SUBCKT INV 1 10  2
+MNL 2 1 0 0 CMOSN L= 0.5U W=1U
+MP1  2  1 10  10 CMOSP L= 0.5U W = 2.67W
+.ENDS
+
+
+.SUBCKT NAND2 9 11 10 12
+MN1 12 11 13 0 CMOSN L= 0.5U W = 1U
+MN2 13 9 0 0  CMOSN L= 0.5U W = 1U
+MP1 12 11 10 10 CMOSP L=0.5U W =1.33U
+MP2 12  9 10 10 CMOSP L=0.5U W =1.33U
+.ENDS
+
+
+.SUBCKT INV3 5 8 3 10 6
+MN1 6 5 7 0 CMOSN L= 0.5U W=1U
+MN2 7 8 0 0 CMOSN L = 0.5U W=1U
+MP1 4 3 10 10 CMOSP L=0.3U W = 2.67U
+MP2 6 5 4 10 CMOSP L=0.5U W=2.67U
+.ENDS
+
+**** RESUMING CIRCUIT.cir ****
+.inc "CMOS_HP_05_T49G.txt"
+
+**** INCLUDING CMOS_HP_05_T49G.txt ****
+*T49G                                        VENDOR: AGILENT
+*TECHNOLOGY: SCN05                           FEATURE SIZE: 0.5 microns
+
+
+*T49G SPICE BSIM3 VERSION 3.1 PARAMETERS
+
+*SPICE 3f5 Level 8, Star-HSPICE Level 49, UTMOST Level 8, PSpice 9.2 level 7
+
+* DATE: Nov 30/04
+* LOT: T49G                  WAF: 7279
+* Temperature_parameters=Default
+.MODEL CMOSN NMOS (                                LEVEL   = 7
++VERSION = 3.1            TNOM    = 27             TOX     = 9.6E-9
++XJ      = 1.5E-7         NCH     = 1.7E17         VTH0    = 0.6161601
++K1      = 0.7890133      K2      = -0.0302596     K3      = 59.0052877
++K3B     = 3.6894434      W0      = 1E-5           NLX     = 1.093081E-7
++DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
++DVT0    = 3.1858628      DVT1    = 0.8147249      DVT2    = -0.1747787
++U0      = 427.8794608    UA      = 1E-12          UB      = 1.124639E-18
++UC      = -1.05776E-11   VSAT    = 1.122452E5     A0      = 0.8575673
++AGS     = 0.1126383      B0      = 1.367708E-6    B1      = 5E-6
++KETA    = 6.593703E-3    A1      = 0              A2      = 1
++RDSW    = 1.697586E3     PRWG    = -0.0219715     PRWB    = -0.0495646
++WR      = 1              WINT    = 2.134996E-7    LINT    = 1.071785E-7
++XL      = -1E-7          XW      = 0              DWG     = 8.913028E-9
++DWB     = 6.119456E-9    VOFF    = -0.0739774     NFACTOR = 1.2331168
++CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
++CDSCB   = 0              ETA0    = 0.0712278      ETAB    = 3.058831E-3
++DSUB    = 0.7243999      PCLM    = 0.6015265      PDIBLC1 = 2.071216E-3
++PDIBLC2 = 2.20708E-3     PDIBLCB = -0.5           DROUT   = 0.0738253
++PSCBE1  = 3.862342E10    PSCBE2  = 7.60725E-10    PVAG    = 0.0145823
++DELTA   = 0.01           RSH     = 2.6            MOBMOD  = 1
++PRT     = 0              UTE     = -1.5           KT1     = -0.11
++KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
++UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
++WL      = 0              WLN     = 1              WW      = 0
++WWN     = 1              WWL     = 0              LL      = 0
++LLN     = 1              LW      = 0              LWN     = 1
++LWL     = 0              CAPMOD  = 2              XPART   = 0.5
++CGDO    = 2.62E-10       CGSO    = 2.62E-10       CGBO    = 4E-9
++CJ      = 5.087497E-4    PB      = 0.99           MJ      = 0.7833537
++CJSW    = 4.406896E-10   PBSW    = 0.99           MJSW    = 0.1
++CJSWG   = 2.2346E-10     PBSWG   = 0.99           MJSWG   = 0.1
++CF      = 0              PVTH0   = -0.0242066     PRDSW   = -79.7501211
++PK2     = 6.113332E-3    WKETA   = -0.0147922     LKETA   = -0.0203124
++PAGS    = 0.0968          )
+*
+.MODEL CMOSP PMOS (                                LEVEL   = 7
++VERSION = 3.1            TNOM    = 27             TOX     = 9.6E-9
++XJ      = 1.5E-7         NCH     = 1.7E17         VTH0    = -0.8229434
++K1      = 0.3755554      K2      = 0.022272       K3      = 94.958559
++K3B     = -5             W0      = 1E-5           NLX     = 2.88172E-7
++DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
++DVT0    = 2.3927823      DVT1    = 0.50623        DVT2    = -0.0549602
++U0      = 159.9331979    UA      = 6.712825E-10   UB      = 9.49685E-19
++UC      = -7.0981E-11    VSAT    = 1.392445E5     A0      = 0.7715943
++AGS     = 0.210978       B0      = 4.626768E-6    B1      = 5E-6
++KETA    = 5.87605E-3     A1      = 0              A2      = 1
++RDSW    = 3.5E3          PRWG    = -9.661999E-3   PRWB    = -0.030827
++WR      = 1              WINT    = 2.219974E-7    LINT    = 5.255148E-8
++XL      = -1E-7          XW      = 0              DWG     = -4.891791E-9
++DWB     = 6.881812E-9    VOFF    = -0.0883274     NFACTOR = 0.9303832
++CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
++CDSCB   = 0              ETA0    = 0.0374018      ETAB    = 1.582601E-3
++DSUB    = 0.243544       PCLM    = 3.1770829      PDIBLC1 = 1.431973E-5
++PDIBLC2 = 5.599407E-3    PDIBLCB = 0.0215455      DROUT   = 1.449231E-3
++PSCBE1  = 6.822796E10    PSCBE2  = 3.04484E-9     PVAG    = 4.7550958
++DELTA   = 0.01           RSH     = 2.4            MOBMOD  = 1
++PRT     = 0              UTE     = -1.5           KT1     = -0.11
++KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
++UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
++WL      = 0              WLN     = 1              WW      = 0
++WWN     = 1              WWL     = 0              LL      = 0
++LLN     = 1              LW      = 0              LWN     = 1
++LWL     = 0              CAPMOD  = 2              XPART   = 0.5
++CGDO    = 2.56E-10       CGSO    = 2.56E-10       CGBO    = 4E-9
++CJ      = 9.523325E-4    PB      = 0.8956853      MJ      = 0.4636084
++CJSW    = 1.011203E-10   PBSW    = 0.8            MJSW    = 0.1115513
++CJSWG   = 4.256E-11      PBSWG   = 0.8            MJSWG   = 0.1115513
++CF      = 0              PVTH0   = 0.0268692      PRDSW   = -71.068735
++PK2     = 1.959705E-3    WKETA   = -2.314868E-3   LKETA   = -0.0176689
++PAGS    = 0.09532         )
+*
+
+**** RESUMING CIRCUIT.cir ****
+.PARAM CL=0.1p
+.PARAM TR=0.4n
+.tran 0.1n 60n
+.probe
+.end
+
+ERROR -- Less than 2 connections at node 220
+ERROR -- Node 220 is floating

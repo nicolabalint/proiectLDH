@@ -1,0 +1,311 @@
+
+**** 10/24/24 00:09:39 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ NAND3
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+.SUBCKT NAND3 1 2 3 7 6
+MN1 6 1 5 0 CMOSN_35 L=0.35U W=1.32U
+MN2 5 2 4 0 CMOSN_35 L=0.35U W=1.32U
+MN3 4 3 0 0 CMOSN_35 L=0.35U W=1.32U
+MP1 6 1 7 7 CMOSP_35 L=0.35U W=1.2U
+MP2 6 2 7 7 CMOSP_35 L=0.35U W=1.2U
+MP3 6 3 7 7 CMOSP_35 L=0.35U W=1.2U
+.ENDS
+
+VIN 1 0 0 PULSE(0 3.3 0 1N 1N 10N 20N)
+VDD 10 0 3.3
+X1 1 10 10 10 8 NAND3
+CL 8 0 0.1P
+.INC CMOS_035.txt
+
+**** INCLUDING CMOS_035.txt ****
+*T42U SPICE BSIM3 VERSION 3.1 PARAMETERS
+*SPICE 3f5 Level 8, Star-HSPICE Level 49, UTMOST Level 8, PSpice level 7
+
+* DATE: Apr 23/04
+* LOT: T42U                  WAF: 0004
+* Temperature_parameters=Default
+.MODEL CMOSN_35 NMOS (                                LEVEL   = 7
++VERSION = 3.1            TNOM    = 27             TOX     = 8E-9
++XJ      = 1E-7           NCH     = 2.2E17         VTH0    = 0.5606593
++K1      = 0.5841313      K2      = 0.019046       K3      = 62.8541835
++K3B     = -10            W0      = 3.497096E-5    NLX     = 1.748693E-7
++DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
++DVT0    = 3.9488655      DVT1    = 0.7198159      DVT2    = -0.0408221
++U0      = 424.7848024    UA      = -6.38659E-11   UB      = 1.61116E-18
++UC      = 3.965548E-11   VSAT    = 1.585695E5     A0      = 1.2634437
++AGS     = 0.1814725      B0      = 1.10064E-6     B1      = 5E-6
++KETA    = 8.019685E-3    A1      = 0              A2      = 0.4134261
++RDSW    = 891.101139     PRWG    = -0.0204266     PRWB    = -0.0724579
++WR      = 1              WINT    = 1.500501E-7    LINT    = 1.018067E-9
+*XL      = -5E-8          XW      = 1.5E-7         
++DWG     = -5.923451E-9
++DWB     = 6.901464E-9    VOFF    = -0.0902773     NFACTOR = 1.1747415
++CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
++CDSCB   = 0              ETA0    = 0.2562513      ETAB    = -0.0414439
++DSUB    = 0.779496       PCLM    = 1.5731835      PDIBLC1 = 1.514699E-3
++PDIBLC2 = 4.83216E-3     PDIBLCB = 0.07015        DROUT   = 0.0724078
++PSCBE1  = 7.304425E8     PSCBE2  = 9.821657E-4    PVAG    = 0
++DELTA   = 0.01           RSH     = 3.4            MOBMOD  = 1
++PRT     = 0              UTE     = -1.5           KT1     = -0.11
++KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
++UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
++WL      = 0              WLN     = 1              WW      = 0
++WWN     = 1              WWL     = 0              LL      = 0
++LLN     = 1              LW      = 0              LWN     = 1
++LWL     = 0              CAPMOD  = 2              XPART   = 0.5
++CGDO    = 2.96E-10       CGSO    = 2.96E-10       CGBO    = 1E-12
++CJ      = 1.057668E-3    PB      = 0.8212037      MJ      = 0.3334596
++CJSW    = 4.721126E-10   PBSW    = 0.8            MJSW    = 0.1919467
++CJSWG   = 1.82E-10       PBSWG   = 0.8            MJSWG   = 0.1919467
++CF      = 0              PVTH0   = -0.013233      PRDSW   = -75.4982617
++PK2     = 1.580096E-3    WKETA   = -5.275386E-3   LKETA   = -5.986897E-3    )
+*
+.MODEL CMOSP_35 PMOS (                                LEVEL   = 7
++VERSION = 3.1            TNOM    = 27             TOX     = 8E-9
++XJ      = 1E-7           NCH     = 8.52E16        VTH0    = -0.6402869
++K1      = 0.4645126      K2      = -0.0154505     K3      = 53.3852742
++K3B     = -5             W0      = 4.746288E-6    NLX     = 2.586663E-7
++DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
++DVT0    = 1.2237297      DVT1    = 0.5297858      DVT2    = -0.0608499
++U0      = 156.3075015    UA      = 1.002957E-10   UB      = 2.085489E-18
++UC      = -1.01217E-11   VSAT    = 1.667027E5     A0      = 1.1484013
++AGS     = 0.361144       B0      = 2.539244E-6    B1      = 5E-6
++KETA    = -7.350246E-3   A1      = 3.118288E-3    A2      = 0.3046773
++RDSW    = 4E3            PRWG    = -0.1440664     PRWB    = 0.0756274
++WR      = 1              WINT    = 1.577495E-7    LINT    = 0
+*XL      = -5E-8          XW      = 1.5E-7         
++DWG     = -1.742606E-8
++DWB     = 7.814255E-9    VOFF    = -0.1325851     NFACTOR = 2
++CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
++CDSCB   = 0              ETA0    = 1.278138E-3    ETAB    = 8.997279E-5
++DSUB    = 0.0125747      PCLM    = 3.762367       PDIBLC1 = 0.026347
++PDIBLC2 = 2.18764E-3     PDIBLCB = -9.316554E-4   DROUT   = 0.2002145
++PSCBE1  = 8E10           PSCBE2  = 5.134141E-10   PVAG    = 1.4462421
++DELTA   = 0.01           RSH     = 2.7            MOBMOD  = 1
++PRT     = 0              UTE     = -1.5           KT1     = -0.11
++KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
++UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
++WL      = 0              WLN     = 1              WW      = 0
++WWN     = 1              WWL     = 0              LL      = 0
++LLN     = 1              LW      = 0              LWN     = 1
++LWL     = 0              CAPMOD  = 2              XPART   = 0.5
++CGDO    = 2.35E-10       CGSO    = 2.35E-10       CGBO    = 1E-12
++CJ      = 1.39285E-3     PB      = 0.99           MJ      = 0.5623547
++CJSW    = 4.086005E-10   PBSW    = 0.99           MJSW    = 0.3538626
++CJSWG   = 4.42E-11       PBSWG   = 0.99           MJSWG   = 0.3538626
++CF      = 0              PVTH0   = 5.751985E-3    PRDSW   = -15.1427945
++PK2     = 1.411338E-3    WKETA   = 2.926201E-3    LKETA   = -1.545375E-3    )
+
+**** RESUMING NAND3.cir ****
+
+.TRAN 0.1N 20N 0 0.1N
+
+.PROBE
+.END
+
+WARNING(ORPSIM-15235): Mosfet X1.MN1, model CMOSN_35: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MN1, model CMOSN_35: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MN2, model CMOSN_35: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MN2, model CMOSN_35: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MN3, model CMOSN_35: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MN3, model CMOSN_35: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MP1, model CMOSP_35: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MP1, model CMOSP_35: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MP2, model CMOSP_35: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MP2, model CMOSP_35: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MP3, model CMOSP_35: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MP3, model CMOSP_35: Ps = 0 is less than W
+
+INFO(ORPSIM-15454): Model CMOSN_35: Using BSIM VERSION 3.1 or lower
+
+INFO(ORPSIM-15454): Model CMOSP_35: Using BSIM VERSION 3.1 or lower
+
+**** 10/24/24 00:09:39 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ NAND3
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSN_35        CMOSP_35        
+               NMOS            PMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .560659        -.640287     
+          KP  258.985800E-06  258.985800E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH    3.4             2.7          
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .821204         .99         
+        PBSW     .8              .99         
+          CJ    1.057668E-03    1.392850E-03 
+        CJSW  472.112600E-12  408.600500E-12 
+          MJ     .33346          .562355     
+        MJSW     .191947         .353863     
+        CGSO  296.000000E-12  235.000000E-12 
+        CGDO  296.000000E-12  235.000000E-12 
+        CGBO    1.000000E-12    1.000000E-12 
+         TOX    8.000000E-09    8.000000E-09 
+          XJ  100.000000E-09  100.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+      DIOMOD    2               2            
+          K1     .584131         .464513     
+          K2     .019046        -.015451     
+        LETA    0               0            
+        WETA    0               0            
+          U0  424.7848        156.3075       
+       XPART     .5              .5          
+        VTH0     .560659        -.640287     
+          K3   62.85418        53.38527      
+          W0   34.970960E-06    4.746288E-06 
+         NLX  174.869300E-09  258.666300E-09 
+        DVT0    3.948866        1.22373      
+        DVT1     .719816         .529786     
+          UA  -63.865900E-12  100.295700E-12 
+          UB    1.611160E-18    2.085489E-18 
+          UC   39.655480E-12  -10.121700E-12 
+        VSAT  158.569500E+03  166.702700E+03 
+        RDSW  891.1011          4.000000E+03 
+        VOFF    -.090277        -.132585     
+     NFACTOR    1.174742        2            
+        PCLM    1.573184        3.762367     
+      PDIBL1    1.514699E-03     .026347     
+      PDIBL2    4.832160E-03    2.187640E-03 
+       DROUT     .072408         .200215     
+      PSCBE1  730.442500E+06   80.000000E+09 
+      PSCBE2  982.165700E-06  513.414100E-12 
+          A0    1.263444        1.148401     
+          A1    0               3.118288E-03 
+          A2     .413426         .304677     
+       NPEAK  220.000000E+15   85.200000E+15 
+         LDD    0               0            
+        LITL   48.989790E-09   48.989790E-09 
+         UA1    4.310000E-09    4.310000E-09 
+         UB1   -7.610000E-18   -7.610000E-18 
+         UC1  -56.000000E-12  -56.000000E-12 
+        PVAG                    1.446242     
+        KETA    8.019685E-03   -7.350246E-03 
+        ETA0     .256251        1.278138E-03 
+        ETAB    -.041444       89.972790E-06 
+         K3B  -10              -5            
+        DVT2    -.040822        -.06085      
+        DSUB     .779496         .012575     
+      MOBMOD    1               1            
+         AGS     .181473         .361144     
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG    -.020427        -.144066     
+        PRWB    -.072458         .075627     
+     PDIBLCB     .07015      -931.655400E-06 
+         DWG   -5.923451E-09  -17.426060E-09 
+         DWB    6.901464E-09    7.814255E-09 
+          B0    1.100640E-06    2.539244E-06 
+          B1    5.000000E-06    5.000000E-06 
+        LINT    1.018067E-09                 
+        WINT  150.050100E-09  157.749500E-09 
+         DLC    1.018067E-09    0            
+         DWC  150.050100E-09  157.749500E-09 
+          CF    0               0            
+        NOIA  100.000000E+18    9.900000E+18 
+        NOIB   50.000000E+03    2.400000E+03 
+        NOIC   -1.400000E-12    1.400000E-12 
+       LKETA   -5.986897E-03   -1.545375E-03 
+       WKETA   -5.275386E-03    2.926201E-03 
+       PVTH0    -.013233        5.751985E-03 
+       PRDSW  -75.49826       -15.14279      
+         PK2    1.580096E-03    1.411338E-03 
+         VTM     .025864         .025864     
+     VERSION    3.1             3.1          
+       PBSWG     .8              .99         
+       MJSWG     .191947         .353863     
+       CJSWG  182.000000E-12   44.200000E-12 
+
+
+WARNING(ORPSIM-15235): Mosfet X1.MN1, model CMOSN_35: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MN1, model CMOSN_35: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MP1, model CMOSP_35: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet X1.MP1, model CMOSP_35: Ps = 0 is less than W
+
+**** 10/24/24 00:09:39 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ NAND3
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    0.0000  (    8)    3.3000  (   10)    3.3000  ( X1.4) 313.6E-12      
+
+( X1.5) 627.2E-12  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VIN          0.000E+00
+    VDD         -3.511E-12
+
+    TOTAL POWER DISSIPATION   1.16E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/24/24 00:09:39 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ NAND3
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .83
+

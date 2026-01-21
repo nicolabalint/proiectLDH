@@ -1,0 +1,45 @@
+module FSM(d,s,rst,clk,q);
+  input d;
+  input s;
+  input rst;
+  input clk;
+  output [2:0]q;
+  reg [2:0]q;
+  parameter s1=0,s2=1,s3=2;
+  reg [1:0]crt_st,nxt_st;
+  
+  always @(posedge clk or negedge rst)
+    begin
+      if(!rst)
+        crt_st<=s1;
+      else
+        crt_st<=nxt_st;
+      end
+      
+  always @(crt_st,s,d)
+  begin
+    case(crt_st)
+      s1:begin
+        q<={1'b0,1'b0,d};
+        if (s)
+          nxt_st<=s2;
+        end
+      s2:begin
+        q<={1'b0,d,1'b0};
+        if(s)
+          nxt_st<=s3;
+        else
+          nxt_st<=s1;
+        end
+      s3:begin
+        q<={d,1'b0,1'b0};
+        if(s)
+          nxt_st=s1;
+        end
+    default:begin
+          q<=3'b000;
+          nxt_st<=s1;
+        end
+  endcase
+end
+endmodule
